@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Awareness Training - Cyber Security Education</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <h1 class="header__title">🛡️ Phishing Awareness Training</h1>
+                <div class="header__progress">
+                    <span class="progress-text">Progress: <span id="progress-percent">0%</span></span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav__tabs">
+                <button class="nav__tab nav__tab--active" data-section="welcome">Welcome</button>
+                <button class="nav__tab" data-section="module1">Module 1</button>
+                <button class="nav__tab" data-section="module2">Module 2</button>
+                <button class="nav__tab" data-section="module3">Module 3</button>
+                <button class="nav__tab" data-section="module4">Module 4</button>
+                <button class="nav__tab" data-section="module5">Module 5</button>
+                <button class="nav__tab" data-section="examples">Examples</button>
+                <button class="nav__tab" data-section="assessment">Final Quiz</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Welcome Section -->
+        <section id="welcome" class="section section--active">
+            <div class="container">
+                <div class="welcome-hero">
+                    <h2>Welcome to Phishing Awareness Training</h2>
+                    <p class="lead">Learn to identify and prevent phishing attacks that cost organizations billions annually.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">3.4B</div>
+                            <div class="stat-label">Daily Phishing Emails</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">57%</div>
+                            <div class="stat-label">Organizations Targeted Weekly</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">36%</div>
+                            <div class="stat-label">Data Breaches from Phishing</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">$4.88M</div>
+                            <div class="stat-label">Average Breach Cost</div>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <h3>Key Phishing Statistics (2024-2025)</h3>
+                        <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/6207154c3d6bd0df85cb4b7ca8c4e244/8db0f66c-ef42-4b43-bf5e-5f5363951b76/fdf5bd0e.png" alt="Phishing Statistics Chart" class="stats-chart">
+                    </div>
+
+                    <div class="learning-objectives">
+                        <h3>What You'll Learn</h3>
+                        <div class="objectives-grid">
+                            <div class="objective-item">
+                                <span class="objective-icon">📧</span>
+                                <div class="objective-content">
+                                    <h4>Recognize Phishing Emails</h4>
+                                    <p>Learn to spot suspicious emails and malicious attachments</p>
+                                </div>
+                            </div>
+                            <div class="objective-item">
+                                <span class="objective-icon">🌐</span>
+                                <div class="objective-content">
+                                    <h4>Identify Fake Websites</h4>
+                                    <p>Master URL analysis and security certificate verification</p>
+                                </div>
+                            </div>
+                            <div class="objective-item">
+                                <span class="objective-icon">🎭</span>
+                                <div class="objective-content">
+                                    <h4>Understand Social Engineering</h4>
+                                    <p>Recognize psychological manipulation tactics</p>
+                                </div>
+                            </div>
+                            <div class="objective-item">
+                                <span class="objective-icon">🛡️</span>
+                                <div class="objective-content">
+                                    <h4>Implement Best Practices</h4>
+                                    <p>Apply prevention strategies and security measures</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn--primary btn--lg" onclick="startTraining()">Start Training</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 1: Understanding Phishing Attacks -->
+        <section id="module1" class="section">
+            <div class="container">
+                <div class="module-header">
+                    <h2>Module 1: Understanding Phishing Attacks</h2>
+                    <div class="module-progress">
+                        <span>Module 1 of 5</span>
+                    </div>
+                </div>
+
+                <div class="module-content">
+                    <div class="content-section">
+                        <h3>What is Phishing?</h3>
+                        <p>Phishing is a cybercrime where attackers impersonate legitimate organizations to steal sensitive information like usernames, passwords, and credit card details.</p>
+                        
+                        <div class="info-box info-box--warning">
+                            <strong>💡 Key Fact:</strong> AI-generated phishing emails have a 54% click rate compared to 12% for human-written ones.
+                        </div>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>Types of Phishing Attacks</h3>
+                        <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/f133d84f-41bd-4f1b-bd94-ef1d8713d5e4.png" alt="Types of Phishing Attacks" class="content-image">
+                        
+                        <div class="attack-types">
+                            <div class="attack-type">
+                                <h4>📧 Email Phishing</h4>
+                                <p>Mass emails sent to many recipients with generic content</p>
+                            </div>
+                            <div class="attack-type">
+                                <h4>🎯 Spear Phishing</h4>
+                                <p>Targeted attacks on specific individuals or organizations</p>
+                            </div>
+                            <div class="attack-type">
+                                <h4>🐋 Whaling</h4>
+                                <p>High-value targets like executives and senior management</p>
+                            </div>
+                            <div class="attack-type">
+                                <h4>📱 Smishing</h4>
+                                <p>Phishing via SMS text messages</p>
+                            </div>
+                            <div class="attack-type">
+                                <h4>📞 Vishing</h4>
+                                <p>Voice phishing through phone calls (442% surge in 2024)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mini-quiz" data-module="1">
+                        <h3>Quick Check</h3>
+                        <div class="quiz-question">
+                            <p>Which type of phishing attack targets high-value individuals like executives?</p>
+                            <div class="quiz-options">
+                                <label><input type="radio" name="q1" value="a"> Email Phishing</label>
+                                <label><input type="radio" name="q1" value="b"> Spear Phishing</label>
+                                <label><input type="radio" name="q1" value="c"> Whaling</label>
+                                <label><input type="radio" name="q1" value="d"> Smishing</label>
+                            </div>
+                            <button class="btn btn--secondary" onclick="checkQuizAnswer(1, 'c')">Check Answer</button>
+                            <div class="quiz-feedback" style="display: none;"></div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn--primary" onclick="completeModule(1)">Complete Module 1</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 2: Recognizing Phishing Emails -->
+        <section id="module2" class="section">
+            <div class="container">
+                <div class="module-header">
+                    <h2>Module 2: Recognizing Phishing Emails</h2>
+                    <div class="module-progress">
+                        <span>Module 2 of 5</span>
+                    </div>
+                </div>
+
+                <div class="module-content">
+                    <div class="content-section">
+                        <h3>Warning Signs Checklist</h3>
+                        <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/cedd7cf3-9c9b-45b4-839e-98cc6161e21a.png" alt="Phishing Email Warning Signs" class="content-image">
+                        
+                        <div class="warning-signs">
+                            <div class="warning-category">
+                                <h4>🚨 Sender Issues</h4>
+                                <ul>
+                                    <li>Generic greetings (Dear Customer)</li>
+                                    <li>Suspicious email addresses</li>
+                                    <li>Public domain emails from companies</li>
+                                    <li>Spoofed sender names</li>
+                                </ul>
+                            </div>
+                            <div class="warning-category">
+                                <h4>📝 Content Red Flags</h4>
+                                <ul>
+                                    <li>Urgent action required</li>
+                                    <li>Threats of account closure</li>
+                                    <li>Too good to be true offers</li>
+                                    <li>Spelling and grammar errors</li>
+                                    <li>Unexpected attachments</li>
+                                </ul>
+                            </div>
+                            <div class="warning-category">
+                                <h4>🔧 Technical Indicators</h4>
+                                <ul>
+                                    <li>Mismatched URLs when hovering</li>
+                                    <li>Suspicious links</li>
+                                    <li>Requests for login credentials</li>
+                                    <li>Unusual file extensions</li>
+                                    <li>Missing security indicators</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-example">
+                        <h3>Interactive Example: Spot the Phishing Email</h3>
+                        <div class="email-example">
+                            <div class="email-header">
+                                <strong>From:</strong> <span class="suspicious-email">security@amaz0n-verification.com</span> <span class="red-flag">🚩</span><br>
+                                <strong>Subject:</strong> URGENT: Your Account Will Be Suspended
+                            </div>
+                            <div class="email-body">
+                                <p>Dear Valued Customer,</p>
+                                <p>We have detected unusual activity on your account. Your account will be suspended in 24 hours unless you verify your information immediately.</p>
+                                <p>Click here to verify: <a href="#" class="suspicious-link">http://verify-amazon-security.fake.com</a> <span class="red-flag">🚩</span></p>
+                                <p>Thank you for your immediate attention.</p>
+                                <p>Amazon Security Team</p>
+                            </div>
+                            <div class="red-flags-found">
+                                <h4>Red Flags in This Email:</h4>
+                                <ul>
+                                    <li>Suspicious domain with "0" instead of "o"</li>
+                                    <li>Generic greeting "Dear Valued Customer"</li>
+                                    <li>Urgency tactics and threats</li>
+                                    <li>Suspicious URL structure</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mini-quiz" data-module="2">
+                        <h3>Quick Check</h3>
+                        <div class="quiz-question">
+                            <p>What is the most reliable way to verify a suspicious email from your bank?</p>
+                            <div class="quiz-options">
+                                <label><input type="radio" name="q2" value="a"> Click the link to check</label>
+                                <label><input type="radio" name="q2" value="b"> Call the bank using a number you find independently</label>
+                                <label><input type="radio" name="q2" value="c"> Reply to the email asking for confirmation</label>
+                                <label><input type="radio" name="q2" value="d"> Forward it to friends for their opinion</label>
+                            </div>
+                            <button class="btn btn--secondary" onclick="checkQuizAnswer(2, 'b')">Check Answer</button>
+                            <div class="quiz-feedback" style="display: none;"></div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn--primary" onclick="completeModule(2)">Complete Module 2</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 3: Identifying Fake Websites -->
+        <section id="module3" class="section">
+            <div class="container">
+                <div class="module-header">
+                    <h2>Module 3: Identifying Fake Websites</h2>
+                    <div class="module-progress">
+                        <span>Module 3 of 5</span>
+                    </div>
+                </div>
+
+                <div class="module-content">
+                    <div class="content-section">
+                        <h3>URL Analysis Techniques</h3>
+                        <div class="url-examples">
+                            <div class="url-example url-example--good">
+                                <span class="url-label">✅ Legitimate:</span>
+                                <code>https://www.amazon.com/account/login</code>
+                            </div>
+                            <div class="url-example url-example--bad">
+                                <span class="url-label">❌ Suspicious:</span>
+                                <code>https://amaz0n-secure.verification-center.com</code>
+                            </div>
+                        </div>
+
+                        <h4>What to Look For:</h4>
+                        <ul class="checklist">
+                            <li>✅ HTTPS protocol (secure connection)</li>
+                            <li>✅ Correct domain spelling</li>
+                            <li>✅ Valid security certificate</li>
+                            <li>❌ Character substitution (0 for O, 1 for l)</li>
+                            <li>❌ Extra subdomains</li>
+                            <li>❌ Unusual TLDs (.tk, .ml, .ga)</li>
+                        </ul>
+                    </div>
+
+                    <div class="website-checker">
+                        <h3>Interactive Website Checker</h3>
+                        <p>Practice identifying legitimate vs fake websites:</p>
+                        <div class="website-examples">
+                            <div class="website-card" onclick="checkWebsite(this, 'fake')">
+                                <div class="website-url">paypal-verification.secure-login.net</div>
+                                <div class="website-status">Click to check</div>
+                            </div>
+                            <div class="website-card" onclick="checkWebsite(this, 'real')">
+                                <div class="website-url">www.paypal.com</div>
+                                <div class="website-status">Click to check</div>
+                            </div>
+                            <div class="website-card" onclick="checkWebsite(this, 'fake')">
+                                <div class="website-url">microsoft-security-alert.com</div>
+                                <div class="website-status">Click to check</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mini-quiz" data-module="3">
+                        <h3>Quick Check</h3>
+                        <div class="quiz-question">
+                            <p>Which URL is most likely to be legitimate?</p>
+                            <div class="quiz-options">
+                                <label><input type="radio" name="q3" value="a"> http://g00gle.com</label>
+                                <label><input type="radio" name="q3" value="b"> https://www.google.com</label>
+                                <label><input type="radio" name="q3" value="c"> https://google-security.tk</label>
+                                <label><input type="radio" name="q3" value="d"> http://www.google-verification.com</label>
+                            </div>
+                            <button class="btn btn--secondary" onclick="checkQuizAnswer(3, 'b')">Check Answer</button>
+                            <div class="quiz-feedback" style="display: none;"></div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn--primary" onclick="completeModule(3)">Complete Module 3</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 4: Social Engineering Tactics -->
+        <section id="module4" class="section">
+            <div class="container">
+                <div class="module-header">
+                    <h2>Module 4: Social Engineering Tactics</h2>
+                    <div class="module-progress">
+                        <span>Module 4 of 5</span>
+                    </div>
+                </div>
+
+                <div class="module-content">
+                    <div class="content-section">
+                        <h3>Psychological Manipulation Techniques</h3>
+                        
+                        <div class="tactics-grid">
+                            <div class="tactic-card">
+                                <div class="tactic-icon">👑</div>
+                                <h4>Authority</h4>
+                                <p>Impersonating executives, IT support, or government officials</p>
+                                <div class="tactic-example">
+                                    <strong>Example:</strong> "This is the CEO. I need you to wire $50,000 immediately for an urgent acquisition."
+                                </div>
+                            </div>
+                            
+                            <div class="tactic-card">
+                                <div class="tactic-icon">⏰</div>
+                                <h4>Urgency</h4>
+                                <p>Creating time pressure to bypass normal security checks</p>
+                                <div class="tactic-example">
+                                    <strong>Example:</strong> "Your account will be closed in 24 hours unless you verify credentials now!"
+                                </div>
+                            </div>
+                            
+                            <div class="tactic-card">
+                                <div class="tactic-icon">😰</div>
+                                <h4>Fear</h4>
+                                <p>Threatening negative consequences for inaction</p>
+                                <div class="tactic-example">
+                                    <strong>Example:</strong> "Security breach detected! Click here immediately to secure your account."
+                                </div>
+                            </div>
+                            
+                            <div class="tactic-card">
+                                <div class="tactic-icon">🤝</div>
+                                <h4>Trust Building</h4>
+                                <p>Establishing rapport through personal information</p>
+                                <div class="tactic-example">
+                                    <strong>Example:</strong> Using your name, job title, and company details from LinkedIn
+                                </div>
+                            </div>
+                            
+                            <div class="tactic-card">
+                                <div class="tactic-icon">🎁</div>
+                                <h4>Reciprocity</h4>
+                                <p>Offering something of value to create obligation</p>
+                                <div class="tactic-example">
+                                    <strong>Example:</strong> "Free security scan for your computer - just enter your login details"
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scenario-analysis">
+                        <h3>Scenario Analysis</h3>
+                        <div class="scenario-card">
+                            <h4>🚨 Red Alert Scenario</h4>
+                            <div class="scenario-content">
+                                <p><strong>Phone Call:</strong> "Hi, this is Mike from IT Security. We've detected a virus on your computer that's spreading to other systems. I need your username and password right now to fix it before it gets worse."</p>
+                                
+                                <h5>Tactics Used:</h5>
+                                <div class="tactics-used">
+                                    <span class="tactic-badge">Authority (IT Support)</span>
+                                    <span class="tactic-badge">Urgency (Right now)</span>
+                                    <span class="tactic-badge">Fear (Virus spreading)</span>
+                                </div>
+                                
+                                <h5>Red Flags:</h5>
+                                <ul>
+                                    <li>Unsolicited call about security issues</li>
+                                    <li>Immediate password request</li>
+                                    <li>No verification of caller identity</li>
+                                    <li>Creates panic and urgency</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mini-quiz" data-module="4">
+                        <h3>Quick Check</h3>
+                        <div class="quiz-question">
+                            <p>An attacker calls pretending to be your CEO and demands an urgent wire transfer. What social engineering tactic are they primarily using?</p>
+                            <div class="quiz-options">
+                                <label><input type="radio" name="q4" value="a"> Reciprocity</label>
+                                <label><input type="radio" name="q4" value="b"> Authority</label>
+                                <label><input type="radio" name="q4" value="c"> Trust Building</label>
+                                <label><input type="radio" name="q4" value="d"> Fear</label>
+                            </div>
+                            <button class="btn btn--secondary" onclick="checkQuizAnswer(4, 'b')">Check Answer</button>
+                            <div class="quiz-feedback" style="display: none;"></div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn--primary" onclick="completeModule(4)">Complete Module 4</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 5: Prevention Best Practices -->
+        <section id="module5" class="section">
+            <div class="container">
+                <div class="module-header">
+                    <h2>Module 5: Prevention Best Practices</h2>
+                    <div class="module-progress">
+                        <span>Module 5 of 5</span>
+                    </div>
+                </div>
+
+                <div class="module-content">
+                    <div class="content-section">
+                        <h3>Essential Security Measures</h3>
+                        
+                        <div class="best-practices-grid">
+                            <div class="practice-card practice-card--critical">
+                                <h4>🔐 Multi-Factor Authentication</h4>
+                                <p>Enable MFA on all accounts, especially email and financial services</p>
+                            </div>
+                            <div class="practice-card practice-card--critical">
+                                <h4>✅ Verify Independently</h4>
+                                <p>Always verify requests through separate communication channels</p>
+                            </div>
+                            <div class="practice-card practice-card--important">
+                                <h4>🔗 Check Links</h4>
+                                <p>Hover over links to see actual destinations before clicking</p>
+                            </div>
+                            <div class="practice-card practice-card--important">
+                                <h4>📱 Keep Updated</h4>
+                                <p>Maintain current software versions and security patches</p>
+                            </div>
+                            <div class="practice-card practice-card--standard">
+                                <h4>🚨 Report Suspicious Activity</h4>
+                                <p>Immediately report suspicious emails to your IT security team</p>
+                            </div>
+                            <div class="practice-card practice-card--standard">
+                                <h4>🎓 Stay Educated</h4>
+                                <p>Regularly train on latest phishing techniques and threats</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prevention-checklist">
+                        <h3>Daily Security Checklist</h3>
+                        <div class="checklist-container">
+                            <label class="checklist-item">
+                                <input type="checkbox" class="prevention-check">
+                                <span class="checkmark"></span>
+                                Check sender identity before responding to emails
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox" class="prevention-check">
+                                <span class="checkmark"></span>
+                                Hover over links before clicking them
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox" class="prevention-check">
+                                <span class="checkmark"></span>
+                                Be suspicious of urgent requests for money/credentials
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox" class="prevention-check">
+                                <span class="checkmark"></span>
+                                Verify website URLs and certificates
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox" class="prevention-check">
+                                <span class="checkmark"></span>
+                                Keep software and browsers updated
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mini-quiz" data-module="5">
+                        <h3>Quick Check</h3>
+                        <div class="quiz-question">
+                            <p>What is the MOST effective way to prevent falling victim to phishing attacks?</p>
+                            <div class="quiz-options">
+                                <label><input type="radio" name="q5" value="a"> Using antivirus software</label>
+                                <label><input type="radio" name="q5" value="b"> Enabling multi-factor authentication</label>
+                                <label><input type="radio" name="q5" value="c"> Training employees to recognize threats</label>
+                                <label><input type="radio" name="q5" value="d"> Blocking all external emails</label>
+                            </div>
+                            <button class="btn btn--secondary" onclick="checkQuizAnswer(5, 'c')">Check Answer</button>
+                            <div class="quiz-feedback" style="display: none;"></div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn--primary" onclick="completeModule(5)">Complete Module 5</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Real-World Examples Section -->
+        <section id="examples" class="section">
+            <div class="container">
+                <h2>Real-World Phishing Examples</h2>
+                
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <div class="example-header">
+                            <h3>Google & Facebook BEC Scam</h3>
+                            <div class="example-meta">
+                                <span class="example-year">2013-2015</span>
+                                <span class="example-loss">$100 Million</span>
+                            </div>
+                        </div>
+                        <p>Lithuanian scammer impersonated Taiwanese supplier Quanta, sending fake invoices to both tech giants over two years.</p>
+                        <div class="example-lesson">
+                            <strong>Lesson:</strong> Always verify large payment requests through multiple channels
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-header">
+                            <h3>Colonial Pipeline Ransomware</h3>
+                            <div class="example-meta">
+                                <span class="example-year">2021</span>
+                                <span class="example-loss">$4.4M + Billions Impact</span>
+                            </div>
+                        </div>
+                        <p>Phishing email gave attackers access to network, leading to ransomware that shut down major US fuel pipeline.</p>
+                        <div class="example-lesson">
+                            <strong>Lesson:</strong> Phishing can be the gateway to much larger attacks
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-header">
+                            <h3>FACC Aerospace BEC</h3>
+                            <div class="example-meta">
+                                <span class="example-year">2016</span>
+                                <span class="example-loss">$50 Million</span>
+                            </div>
+                        </div>
+                        <p>Attacker impersonated CEO to request urgent wire transfer for fake acquisition project.</p>
+                        <div class="example-lesson">
+                            <strong>Lesson:</strong> CEO impersonation attacks require strict verification protocols
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-header">
+                            <h3>Sony Pictures Hack</h3>
+                            <div class="example-meta">
+                                <span class="example-year">2014</span>
+                                <span class="example-loss">$100+ Million</span>
+                            </div>
+                        </div>
+                        <p>Spear phishing emails to executives led to massive data breach of 100+ TB of confidential data.</p>
+                        <div class="example-lesson">
+                            <strong>Lesson:</strong> Executive training is critical as they are high-value targets
+                        </div>
+                    </div>
+
+                    <div class="example-card example-card--recent">
+                        <div class="example-header">
+                            <h3>Pepco Group AI Attack</h3>
+                            <div class="example-meta">
+                                <span class="example-year">2024</span>
+                                <span class="example-loss">€15.5 Million</span>
+                            </div>
+                        </div>
+                        <p>Recent BEC attack in Hungary using AI-enhanced phishing emails without grammatical errors.</p>
+                        <div class="example-lesson">
+                            <strong>Lesson:</strong> AI is making phishing more sophisticated and harder to detect
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Assessment Section -->
+        <section id="assessment" class="section">
+            <div class="container">
+                <h2>Final Assessment</h2>
+                <div class="assessment-intro">
+                    <p>Test your knowledge with this comprehensive quiz covering all modules. You need 80% to pass and earn your certificate.</p>
+                </div>
+
+                <div id="final-quiz" class="final-quiz">
+                    <div class="quiz-question-container">
+                        <div class="quiz-progress">
+                            <span>Question <span id="current-question">1</span> of <span id="total-questions">10</span></span>
+                        </div>
+                        
+                        <div class="quiz-question-final" id="quiz-question">
+                            <!-- Questions will be loaded dynamically -->
+                        </div>
+                        
+                        <div class="quiz-navigation">
+                            <button class="btn btn--outline" id="prev-btn" onclick="previousQuestion()" disabled>Previous</button>
+                            <button class="btn btn--primary" id="next-btn" onclick="nextQuestion()">Next</button>
+                            <button class="btn btn--primary" id="submit-btn" onclick="submitAssessment()" style="display: none;">Submit Assessment</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="assessment-results" class="assessment-results" style="display: none;">
+                    <div class="results-card">
+                        <h3>Assessment Complete!</h3>
+                        <div class="score-display">
+                            <div class="score-circle">
+                                <span class="score-percentage" id="final-score">0%</span>
+                            </div>
+                        </div>
+                        <div class="score-feedback" id="score-feedback"></div>
+                        <div class="certificate-section" id="certificate-section" style="display: none;">
+                            <button class="btn btn--primary btn--lg" onclick="downloadCertificate()">
+                                📜 Download Certificate
+                            </button>
+                        </div>
+                        <button class="btn btn--secondary" onclick="retakeAssessment()">Retake Assessment</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Certificate Modal -->
+    <div id="certificate-modal" class="modal hidden">
+        <div class="modal-backdrop" onclick="closeCertificate()"></div>
+        <div class="modal-content">
+            <div class="certificate">
+                <div class="certificate-header">
+                    <h2>🛡️ Certificate of Completion</h2>
+                    <div class="certificate-subtitle">Phishing Awareness Training</div>
+                </div>
+                <div class="certificate-body">
+                    <p>This certifies that</p>
+                    <div class="certificate-name" id="certificate-name">Participant</div>
+                    <p>has successfully completed the Phishing Awareness Training program and demonstrated proficiency in identifying and preventing phishing attacks.</p>
+                    <div class="certificate-details">
+                        <div class="certificate-score">
+                            Score: <span id="certificate-score">0%</span>
+                        </div>
+                        <div class="certificate-date">
+                            Date: <span id="certificate-date"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="certificate-footer">
+                    <div class="certificate-seal">🏆</div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn--secondary" onclick="closeCertificate()">Close</button>
+                <button class="btn btn--primary" onclick="printCertificate()">Print Certificate</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
